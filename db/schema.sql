@@ -1,0 +1,3 @@
+DROP DATABASE IF EXIST findIt_db
+CREATE DATABASE findIt_db
+ 
