@@ -1,13 +1,8 @@
-const User = require('');
-const Product = require('');
-const Catergories = require('');
+const User = require('./User');
+const Product = require('./Products');
+const Catergories = require('./Categories');
 
-Gallery.hasMany(Painting, {
-  foreignKey: 'gallery_id',
-});
 
-Painting.belongsTo(Gallery, {
-  foreignKey: 'gallery_id',
-});
+
 
 module.exports = { User, Product, Categories };
