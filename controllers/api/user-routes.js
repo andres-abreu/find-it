@@ -36,7 +36,7 @@ router.post('/', async (req, res) => {
         return;
       }
   
-      const validPassword = await dbUserData.checkPassword(req.body.password);
+      //const validPassword = await dbUserData.checkPassword(req.body.password);
   
       if (!validPassword) {
         res

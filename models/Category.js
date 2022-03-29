@@ -1,30 +1,30 @@
-const {Model, DataType} = require('sequelize')
+const {Model, DataTypes} = require('sequelize')
 const bcrypt = require('bcrypt');
-const sequelize = require('sequelize')
+const sequelize = require('../config/connection')
 
 class Category extends Model {}
 
 Category.init(
     {
-        id: {
-            type: DataType.INTEGER,
-            allowNull: false,
-            primaryKey: true,
-            autoIncrement: true
-        },
-        name: {
-            type: DataType.STRING,
-            allowNull: false
-        }
+      id: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        primaryKey: true,
+        autoIncrement: true
+      },
+      category_name: {
+        type: DataTypes.STRING,
+        allowNull: false
+      }
     },
     {
-        sequelize,
-        timestamps: false,
-        freezeTableName: true,
-        underscored: true,
-        modelName: 'category'
+      sequelize,
+      timestamps: false,
+      freezeTableName: true,
+      underscored: true,
+      modelName: 'category',
     }
-)
+  );
 
 
 module.exports = Category;

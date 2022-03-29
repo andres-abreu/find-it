@@ -1,3 +1,4 @@
-DROP DATABASE IF EXIST findIt_db
-CREATE DATABASE findIt_db
+DROP DATABASE IF EXISTS findit_db;
+
+CREATE DATABASE findit_db;
  
