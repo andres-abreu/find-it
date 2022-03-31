@@ -13,7 +13,7 @@ User.init(
         id: {
             type: DataTypes.INTEGER,
             allowNull: false,
-            primaryKey:true,
+            primaryKey: true,
             autoIncrement: true
         },
         username: {
@@ -38,12 +38,13 @@ User.init(
     },
     {
         hooks: {
-            async beforeCreate(newUserData){
+            async beforeCreate(newUserData) {
                 newUserData.password = await bcrypt.hash(newUserData.password, 10);
+                return newYserData
             }
         },
         sequelize,
-        timestamps:false,
+        timestamps: false,
         freezeTableName: true,
         underscored: true,
         modelName: 'user'
