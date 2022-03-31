@@ -22,7 +22,6 @@ router.post('/', async (req, res) => {
 });
 
 // Login
-// Login
 router.post('/login', async (req, res) => {
   try {
     const dbUserData = await User.findOne({
@@ -46,8 +45,6 @@ router.post('/login', async (req, res) => {
         .json({ message: 'Incorrect email or password. Please try again!' });
       return;
     }
-
-    // Once the user successfully logs in, set up the sessions variable 'loggedIn'
     req.session.save(() => {
       req.session.loggedIn = true;
 
