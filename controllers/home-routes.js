@@ -61,7 +61,7 @@ router.get('/product/:id', async (req, res) => {
 
         const product = dbProductData.get({ plain: true });
 
-        res.render('product', { product });
+        res.render('product', { products });
     } catch (err) {
         console.log(err);
         res.status(500).json(err);
