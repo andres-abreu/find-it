@@ -7,3 +7,4 @@ router.use('/product', productRoutes)
 router.use('/users', userRoutes)
 
 module.exports = router
+
