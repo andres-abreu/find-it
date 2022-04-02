@@ -89,26 +89,17 @@ router.post('/', async (req, res) => {
 });
 
 // CREATE new poduct
-router.post('/', async (req, res) => {
-    try {
-        const dbProductData = await Product.create({
-            title: req.body.title,
-            description: req.body.description,
-            price: req.body.price,
-            image: req.body.image
-        });
+router.post('/api/product', async (req, res) => {
+    // set id based on what the next index of the array will be
+    req.body.id = product.length.toString();
 
-        req.session.save(() => {
-            req.session.loggedIn = true;
-
-            res.status(200).json(dbUserData);
-        });
-    } catch (err) {
-        console.log(err);
-        res.status(500).json(err);
+    if (!validateProduct(req.body)) {
+        res.status(400).send('The product is not properly formatted.');
+    } else {
+        const product = createNewProduct(req.body, product);
+        res.json(product);
     }
 });
-
 
 
 
