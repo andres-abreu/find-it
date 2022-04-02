@@ -23,10 +23,23 @@ Product.init(
       type: DataTypes.STRING,
       allowNull: false
     },
+    filename: {
+      type: DataTypes.STRING,
+      allowNull: true
+    },
     category_id: {
       type: DataTypes.INTEGER,
+      allowNull:false,
       references: {
         model:'category',
+        key:'id'
+      }
+    },
+    user_id: {
+      type: DataTypes.INTEGER,
+      allowNull:false,
+      references: {
+        model:'user',
         key:'id'
       }
     }
@@ -41,4 +54,3 @@ Product.init(
 )
 
 module.exports = Product
-//Add relation to User

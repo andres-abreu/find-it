@@ -47,7 +47,9 @@ router.post('/login', async (req, res) => {
     }
     req.session.save(() => {
       req.session.loggedIn = true;
-
+      req.session.username = dbUserData.username;
+      req.session.email = dbUserData.email;
+      req.session.user_id = dbUserData.id;
       res
         .status(200)
         .json({ user: dbUserData, message: 'You are now logged in!' });
