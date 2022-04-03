@@ -1,7 +1,7 @@
 {
   "name": "find-it",
   "version": "1.0.0",
-  "description": "",
+  "description": "# trying to see if Maria can push",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -31,5 +31,6 @@
     "multer": "^1.4.4",
     "mysql2": "^2.3.3",
     "sequelize": "^6.17.0"
-  }
+  },
+  "devDependencies": {}
 }
