@@ -1,6 +1,6 @@
 const router = require('express').Router();
 
-const {User, Products, Category} = require('../models')
+const {User, Product, Category} = require('../models')
 
 const withAuth = require('../utils/auth')
 
@@ -26,6 +26,35 @@ router.get('/login', (req, res) => {
 
 router.get('/createproduct', (req, res) =>{
     res.render('productform')
+})
+
+router.get('/:category_id', (req, res) => {
+    Product.findAll({
+        where: {
+            category_id: req.params.category_id
+        },
+        attributes: [
+            'id',
+            'product_name',
+            'description',
+            'price',
+            'filename'
+        ],
+        include: [
+            {
+                model: User,
+                attributes:['username']
+            }
+        ]
+    })
+    .then(dbProductData => {
+        const products = dbProductData.map(product => product.get({plain: true}))
+        res.render('product-list', {products, loggedIn: true})
+    })
+    .catch(err => {
+        console.log(err);
+        res.status(500).json(err)
+    })
 })
 
 

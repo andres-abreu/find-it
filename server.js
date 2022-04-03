@@ -6,7 +6,7 @@ const {Product} = require('./models')
 const multer = require('multer');
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
-    cb(null,'public/uploadImages')
+    cb(null,'public/css/uploadImages')
   },
   filename: (req, file, cb) => {
     console.log(file);
