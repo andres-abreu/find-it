@@ -1,9 +1,9 @@
 :root {
-  --primary: #3d5852;
-  --secondary: #86938f;
+  --primary: grey;
+  --secondary: #553a8c;
   --tertiary: #5e877f;
-  --quatrinary: #6c6b67;
-  --light: #e3e4e3;
+  --quatrinary: white;
+  --light: black;
   --dark: #182c23;
   --error: rgb(228, 46, 1);
   --border-radius: 0.3rem;
@@ -33,6 +33,7 @@ header {
   text-align: center;
   background: var(--primary);
   color: var(--light);
+  background-image: url("../images/Shopaholics\ -\ Online\ Promotions\(1\).png");
 }
 
 main {
@@ -52,6 +53,7 @@ aside {
 nav {
   display: flex;
   background-color: var(--secondary);
+  text-align: center;
 }
 
 nav a {
@@ -66,9 +68,9 @@ nav a:hover {
   background-color: var(--dark);
 }
 
-.gallery {
-  flex: 4;
-  background-color: #fff;
+.catergory {
+  flex: 3;
+  background-color: blue;
   padding: 50px;
   display: flex;
   flex-flow: row wrap;
@@ -92,14 +94,14 @@ img {
   height: auto;
 }
 
-.painting {
+.product {
   width: 50%;
   background-color: white;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   margin-bottom: 25px;
 }
 
-.painting-details {
+.product-details {
   text-align: center;
   padding: 10px 20px;
   font-weight: bold;
@@ -111,7 +113,7 @@ img {
   flex: 0 1 300px;
   border: 7px double var(--dark);
   border-radius: 10px;
-  background-color: var(--light);
+  background-color: white;
   color: var(--dark);
 }
 
@@ -124,8 +126,9 @@ img {
   border-radius: var(--border-radius);
   border-style: double;
   border-width: thick;
-  background-color: #577a7c;
+  background-color: white;
   color: var(--light);
+  align-items: center;
 }
 
 .card header {
@@ -144,7 +147,7 @@ img {
   font-weight: bold;
 }
 
-.gallery-name {
+.catergory-name {
   text-transform: uppercase;
   letter-spacing: 3px;
   text-shadow: 2px 2px 5px var(--secondary);

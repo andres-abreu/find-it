@@ -12,6 +12,8 @@
 <body>
   <header>
     <h1>FIND IT</h1>
+    <p> A unqiue clothing store feature used brands like Nike,HM, and more.</p>
+    <p>To discover more product please login. </p>
   </header>
   <nav>
     <a href="/">Home</a>
@@ -23,13 +25,13 @@
     {{/if}}
   </nav>
   <main>
-    <aside>
-      <h2>You might find it here!</h2>
-    </aside>
-    <div class="categories">
-      {{{body}}}
-    </div>
+    {{{body}}}
   </main>
+  <footer>
+    Thanks For visiting!!!
+  </footer>
+
+
   {{#if loggedIn}}
   <script src="/js/logout.js"></script>
   {{/if}}
