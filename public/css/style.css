@@ -10,7 +10,7 @@
 }
 
 body {
-  font-family: Arial;
+  font-family: Satisfy;
   margin: 0;
   display: flex;
   flex-direction: column;
@@ -29,11 +29,26 @@ a:visited {
 }
 
 header {
-  padding: 40px;
+  padding: 64px;
+  font-size: 30px;
   text-align: center;
-  background: var(--primary);
-  color: var(--light);
-  background-image: url("../images/Shopaholics\ -\ Online\ Promotions\(1\).png");
+  background: lavender;
+  color: rebeccapurple;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  background-image: url("../images/Humaaans\ -\ 3\ Characters.png");
+
+}
+
+p {
+  font-size: 30px;
+  font-family: Satisfys, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif, initial;
+  color: rgb(73, 105, 8);
+  padding: 10px;
+
+}
+
+h1 {
+  font-size: 50px;
 }
 
 main {
@@ -54,6 +69,7 @@ nav {
   display: flex;
   background-color: var(--secondary);
   text-align: center;
+  list-style: none;
 }
 
 nav a {
@@ -66,6 +82,7 @@ nav a {
 nav a:hover {
   color: var(--secondary);
   background-color: var(--dark);
+  text-shadow: none;
 }
 
 .catergory {
@@ -81,12 +98,12 @@ nav a:hover {
 .btn-no-style {
   background: none;
   border: none;
-  padding: 0;
+  padding: 10;
   cursor: pointer;
   text-decoration: none;
   font-size: 100%;
   transition: color 0.1s;
-  margin-left: 16px;
+  margin-left: 30px;
 }
 
 img {
@@ -118,25 +135,24 @@ img {
 }
 
 .login-card {
-  margin: 0 0 20px 0;
+  margin: 10px 0 40px 30px;
   flex: 0 0 50%;
   max-width: 50%;
-  padding: 5px;
+  padding: 20px;
   border: 3px solid var(--dark);
   border-radius: var(--border-radius);
   border-style: double;
-  border-width: thick;
   background-color: white;
   color: var(--light);
   align-items: center;
 }
 
 .card header {
-  color: var(--light);
+  color: black;
   font-weight: bold;
   text-transform: uppercase;
   margin: 0;
-  background-color: var(--tertiary);
+  background-color: white;
   padding: 0.625rem;
   border-radius: calc(0.18rem - 1px) calc(0.18rem - 1px) 0 0;
 }
