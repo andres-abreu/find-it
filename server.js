@@ -105,6 +105,7 @@ app.post('/create', upload.single("image"), (req, res) => {
       category_id:category_id,
       user_id:req.session.user_id
     })
+    res.redirect('/dashboard')
 })
 
 sequelize.sync({ force: false }).then(() => {
