@@ -1,6 +1,28 @@
 const router = require('express').Router();
-const {Product} = require('../../models');
-const { route } = require('../home-routes');
+const { Product } = require('../../models')
+
+const multer = require('multer')
+const upload = multer({ dest: './public/uploadImages' })
+
+// CREATE new product
+router.post('/api/product', async (req, res) => {
+    try {
+        const dbProductData = await Product.create({
+            tittle: req.body.title,
+            descirption: req.body.descirption,
+            price: req.body.price,
+        });
+
+        req.session.save(() => {
+            req.session.loggedIn = true;
+
+            res.status(200).json(dProductData);
+        });
+    } catch (err) {
+        console.log(err);
+        res.status(500).json(err);
+    }
+});
 
 router.delete('/:id', (req, res) => {
     console.log('id', req.params.id);
