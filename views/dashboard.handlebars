@@ -1,0 +1,15 @@
+{{#if products.length}}
+<section>
+  <h2>Hi {{user.username.products}}!</h2>
+  {{!-- -> Hi msg no working --}}
+  <ul style="list-style: none">
+    {{#each products as |product|}}
+    <li>
+      {{> product-info product}}
+      <a href="/dashboard/edit/{{product.id}}" class="edit-link btn btn-primary">Edit Product</a>
+    </li>
+    {{/each}}
+  </ul>
+</section>
+{{/if}}
+

@@ -1,6 +1,6 @@
 const router = require('express').Router();
 
-const { User, Products, Category, Product } = require('../models')
+const {User, Product, Category} = require('../models')
 
 const withAuth = require('../utils/auth')
 
@@ -28,79 +28,34 @@ router.get('/createproduct', (req, res) => {
     res.render('productform')
 })
 
-// GET one Categories for user
-router.get('/category/:id', async (req, res) => {
-    try {
-        const dbCategoryData = await Category.findByPk(req.params.id, {
-            include: [
-                {
-                    model: Product,
-                    attributes: [
-                        'id',
-                        'title',
-                        'description',
-                        'image',
-                        'price',
-                    ],
-                },
-            ],
-        });
-
-        const category = dbCategoryData.get({ plain: true });
-        res.render('category', { category });
-    } catch (err) {
+router.get('/:category_id', (req, res) => {
+    Product.findAll({
+        where: {
+            category_id: req.params.category_id
+        },
+        attributes: [
+            'id',
+            'product_name',
+            'description',
+            'price',
+            'filename'
+        ],
+        include: [
+            {
+                model: User,
+                attributes:['username']
+            }
+        ]
+    })
+    .then(dbProductData => {
+        const products = dbProductData.map(product => product.get({plain: true}))
+        res.render('product-list', {products, loggedIn: true})
+    })
+    .catch(err => {
         console.log(err);
-        res.status(500).json(err);
-    }
-});
-
-// GET one product
-router.get('/product/:id', async (req, res) => {
-    try {
-        const dbProductData = await Product.findByPk(req.params.id);
-
-        const product = dbProductData.get({ plain: true });
-
-        res.render('product', { products });
-    } catch (err) {
-        console.log(err);
-        res.status(500).json(err);
-    }
-});
-
-// CREATE new user
-router.post('/', async (req, res) => {
-    try {
-        const dbUserData = await User.create({
-            username: req.body.username,
-            email: req.body.email,
-            password: req.body.password,
-        });
-
-        req.session.save(() => {
-            req.session.loggedIn = true;
-
-            res.status(200).json(dbUserData);
-        });
-    } catch (err) {
-        console.log(err);
-        res.status(500).json(err);
-    }
-});
-
-// CREATE new poduct
-router.post('/api/product', async (req, res) => {
-    // set id based on what the next index of the array will be
-    req.body.id = product.length.toString();
-
-    if (!validateProduct(req.body)) {
-        res.status(400).send('The product is not properly formatted.');
-    } else {
-        const product = createNewProduct(req.body, product);
-        res.json(product);
-    }
-});
-
+        res.status(500).json(err)
+    })
+})
 
 
 module.exports = router;

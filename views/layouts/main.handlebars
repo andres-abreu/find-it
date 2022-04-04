@@ -18,19 +18,23 @@
   <nav>
     <a href="/">Home</a>
     {{#if loggedIn}}
-    <button id="logout" class="btn-no-style">Logout</button>
-    <a href="/createproduct" id="create-product" class="btn-no-style">Create Product</a>
-    {{else}}
-    <a href="/login">Login</a>
+    <p>You are Logged In</p>
     {{/if}}
-  </nav>
+    <nav>
+      <a href="/">Home</a>
+      {{#if loggedIn}}
+      <button id="logout" class="btn-no-style">Logout</button>
+      <a href="/createproduct" id="create-product" class="btn-no-style">Create Product</a>
+      <a href="/dashboard"> Dashboard </a>
+      {{else}}
+      <a href="/login">Login</a>
+      {{/if}}
+    </nav>
+  </header>
+
   <main>
     {{{body}}}
   </main>
-  <footer>
-    Thanks For visiting!!!
-  </footer>
-
 
   {{#if loggedIn}}
   <script src="/js/logout.js"></script>

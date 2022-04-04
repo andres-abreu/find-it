@@ -1,33 +1,38 @@
 <div class="row justify-space-between-md">
   <div class="login-card">
     <h2 class="page-title">Post Your Product</h2>
-    <form class="form login-form">
+    <form class="form login-form" action="/create" enctype="multipart/form-data" method="post">
       <div class="form-group">
-        <label for="product-name">Title:</label>
-        <input class="form-input" type="text" id="product-name" />
+        <label for="product-name" name="name">Title:</label>
+        <input class="form-input" type="text" name="name"  />
       </div>
       <div class="form-group">
-        <label for="product-price">Price:</label>
-        <input class="form-input" type="price" id="product-price" />
+        <label for="product-price" name="price">Price:</label>
+        <input class="form-input" type="number" name="price" />
       </div>
       <div class="form-group">
-        <label for="product-description">Post a description:</label>
-        <input class="form-input" type="description" id="product-description" />
+        <label for="product-description" name="description">Post a description:</label>
+        <input class="form-input" type="description" name="description" />
       </div>
       <div class="form-group">
       <label for="categories">Choose a category:</label>
-<select id="categories" name="categories">
-  <option value="shirts">Shirts</option>
-  <option value="shorts">Shorts</option>
-  <option value="skirts">Skirts</option>
-  <option value="hats">Hats</option>
-</select>
+        <select id="categories" name="categories">
+          <option value="Shirts">Shirts</option>
+          <option value="Shorts">Shorts</option>
+          <option value="Skirts">Skirts</option>
+          <option value="Hats">Hats</option>
+        </select>
       </div>
       <div class="form-group">
-        <button class="btn btn-primary" type="submit">Post It!</button>
+        <span>Upload an image</span>
+          <input type="file" name="image" accept='image/*' >
+      </div>
+      <div class="form-group">
+        <button id="buttonCreate" class="btn btn-primary" type="submit">Post It!</button>
       </div>
     </form>
   </div>
+</div>
   
 
 <script src="./js/createproducthandle.js"></script>
