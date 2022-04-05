@@ -25,7 +25,7 @@ router.get('/login', (req, res) => {
 })
 
 router.get('/createproduct', (req, res) => {
-    res.render('productform')
+    res.render('productform',{loggedIn: true})
 })
 
 router.get('/:category_id', (req, res) => {
