@@ -9,6 +9,9 @@
   <title>FIND IT</title>
   <link rel="stylesheet" type="text/css" href="/css/jass.css">
   <link rel="stylesheet" type="text/css" href="/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Luxurious+Roman&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -20,16 +23,16 @@
     <p>You are Logged In</p>
     {{/if}}
   </header>
-    <nav>
-      <a href="/">Home</a>
-      {{#if loggedIn}}
-      <button id="logout" class="btn-no-style .text-white">Logout</button>
-      <a href="/createproduct" id="create-product" class="btn-no-style">Create Product</a>
-      <a href="/dashboard"> Dashboard </a>
-      {{else}}
-      <a href="/login">Login</a>
-      {{/if}}
-    </nav>
+  <nav>
+    <a href="/">Home</a>
+    {{#if loggedIn}}
+    <button id="logout" class="btn-no-style">Logout</button>
+    <a href="/createproduct" id="create-product" class="btn-no-style">Create Product</a>
+    <a href="/dashboard"> Dashboard </a>
+    {{else}}
+    <a href="/login">Login</a>
+    {{/if}}
+  </nav>
   </header>
 
   <main>

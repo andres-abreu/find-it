@@ -6,7 +6,7 @@ const withAuth = require('../utils/auth')
 
 //GET ALL Categories for homepage
 
-router.get('/', async (req, res) => {
+router.get('/',withAuth, async (req, res) => {
     try {
         const dbCategoryData = await Category.findAll()
         const categories = dbCategoryData.map((category) => category.get({ plain: true }))

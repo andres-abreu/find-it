@@ -1,11 +1,35 @@
 const router = require('express').Router();
-const {Product} = require('../../models');
-const { route } = require('../home-routes');
+const { User, Product, Category } = require('../../models');
+const sequelize = require('../../config/connection')
+const withAuth = require('../../utils/auth')
+
+
+router.post('/api/product', async (req, res) => {
+    try {
+        const dbProductData = await Product.create({
+            tittle: req.body.title,
+            descirption: req.body.descirption,
+            price: req.body.price,
+        });
+
+        req.session.save(() => {
+            req.session.loggedIn = true;
+
+            res.status(200).json(dProductData);
+        });
+    } catch (err) {
+        console.log(err);
+        res.status(500).json(err);
+    }
+});
 
 router.delete('/:id', (req, res) => {
     console.log('id', req.params.id);
     Product.destroy({
-        where: {id: req.params.id}
+        where: 
+        {
+            id: req.params.id
+        }
     })
     .then(dbProductData => {
         if (!dbProductData) {
