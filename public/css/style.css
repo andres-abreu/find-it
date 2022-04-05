@@ -46,7 +46,7 @@ p {
   font-family: Satisfys, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif, initial;
   color: rgb(73, 105, 8);
   padding: 10px;
-  text-shadow: 2px 2px whitesmoke;
+  text-shadow: 3px 3px whitesmoke;
   letter-spacing: 1px;
 
 }
@@ -124,6 +124,9 @@ p, btn {
   color: white;
 }
 
+
+
+
 img {
   max-width: 100%;
   height: auto;
@@ -154,9 +157,11 @@ img {
 
 
 .login-card {
-  margin: 10px 0 40px 30px;
+  /*margin: 10px 0 40px 30px;*/
+  width: 1000px;
+  margin: 25px 0 0 350px;
   flex: 0 0 50%;
-  max-width: 50%;
+  /* max-width: 50%; */
   padding: 20px;
   border: 3px solid var(--dark);
   border-radius: var(--border-radius);
@@ -199,3 +204,4 @@ img {
   align-content: flex-start;
   align-items: center;
 }
+

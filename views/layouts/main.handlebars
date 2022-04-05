@@ -17,7 +17,7 @@
 <body>
   <header>
     <h1>FIND IT</h1>
-    <p> A unqiue clothing store feature used brands like Nike,HM, and more.</p>
+    <p> A unqiue clothing store featuring used brands like Nike,HM, and more.</p>
     <p>To discover more products login or sign up! </p>
     {{#if loggedIn}}
     <p>You are Logged In</p>
@@ -26,7 +26,7 @@
   <nav>
     <a href="/">Home</a>
     {{#if loggedIn}}
-    <button id="logout" class="btn-no-style">Logout</button>
+    <a href="/logout" id="logout" class="btn-no-style">Logout</a>
     <a href="/createproduct" id="create-product" class="btn-no-style">Create Product</a>
     <a href="/dashboard"> Dashboard </a>
     {{else}}
