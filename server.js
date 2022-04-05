@@ -54,46 +54,23 @@ app.post('/create', upload.single("image"), (req, res) => {
     let category_id = 0;
     console.log();
     switch (req.body.categories) {
-      case 'Shirts':
+      case 'Tops':
             category_id = 1;
             console.log(category_id);
         break;
-      case 'Shorts':
+      case 'Bottoms':
           category_id = 2;
           console.log(category_id);
       break;
-      case 'Skirts':
+      case 'Shoes':
             category_id = 3;
             console.log(category_id);
         break;
-      case 'Hats':
+      case 'Accesories':
           category_id = 4;
           console.log(category_id);
       break;
-      case 'Dress':
-            category_id = 5;
-            console.log(category_id);
-        break;
-      case 'Pants':
-            category_id = 6;
-            console.log(category_id);
-        break;
-      case 'Active Wear':
-            category_id = 7;
-            console.log(category_id);
-        break;
-      case 'Beach Wear':
-            category_id = 8;
-            console.log(category_id);
-        break;
-      case 'Suits':
-            category_id = 9;
-            console.log(category_id);
-        break;
-      case 'Shoes And Socks':
-            category_id = 10;
-            console.log(category_id);
-        break;
+      
       default:
         break;
     }

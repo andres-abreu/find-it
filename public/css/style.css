@@ -1,3 +1,4 @@
+
 :root {
   --primary: grey;
   --secondary: white;
@@ -33,7 +34,8 @@ header {
   font-size: 30px;
   text-align: center;
   background: lavender;
-  color: rgb(116, 39, 194);
+  color: rebeccapurple;
+  text-shadow: 2px 2px whitesmoke;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   background-image: url("../images/Humaaans\ -\ 3\ Characters.png");
 
@@ -42,17 +44,17 @@ header {
 p {
   font-size: 30px;
   font-family: Satisfys, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif, initial;
-  color: rgb(110, 81, 110);
+  color: rgb(73, 105, 8);
   padding: 10px;
-  text-shadow: 1px 2px black;
+  text-shadow: 3px 3px whitesmoke;
   letter-spacing: 1px;
 
 }
 
 h1 {
   font-size: 64px;
-  font-family: 'PT Serif', serif;
-  text-shadow: 1px 2px yellowgreen;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  text-shadow: 2px 2px whitesmoke;
 
 }
 
@@ -72,7 +74,8 @@ aside {
 
 nav {
   display: flex;
-  background-color: var(--secondary);
+  background-color: rebeccapurple;
+  color: var(--quatrinary);
   text-align: center;
   list-style: none;
   font-size: 20px;
@@ -87,8 +90,8 @@ nav a {
 }
 
 nav a:hover {
-  color: var(--secondary);
-  background-color: var(--dark);
+  color: whitesmoke;
+  background-color: rgba(211, 197, 233, 0.932);
   text-shadow: none;
 }
 
@@ -102,6 +105,10 @@ nav a:hover {
   align-items: center;
 }
 
+p, btn {
+  text-shadow: none;
+}
+
 .btn-no-style {
   background: none;
   border: none;
@@ -113,6 +120,13 @@ nav a:hover {
   margin-left: 30px;
 }
 
+#logout {
+  color: white;
+}
+
+
+
+
 img {
   max-width: 100%;
   height: auto;
@@ -121,7 +135,7 @@ img {
 .product {
   width: 50%;
   background-color: white;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: none;
   margin-bottom: 25px;
 }
 
@@ -136,15 +150,33 @@ img {
   margin: 20px;
   flex: 0 1 300px;
   border: 7px double var(--dark);
-  border-radius: 10px;
+  /*border-radius: 10px;*/
   background-color: white;
   color: var(--dark);
 }
 
+
 .login-card {
-  margin: 10px 0 40px 30px;
+  /*margin: 10px 0 40px 30px;*/
+  width: 1000px;
+  margin: 25px 0 0 350px;
+  flex-grow: 1;
   flex: 0 0 50%;
-  max-width: 50%;
+  /* max-width: 50%; */
+  padding: 20px;
+  border: 3px solid var(--dark);
+  border-radius: var(--border-radius);
+  border-style: double;
+  background-color: white;
+  color: var(--light);
+  align-items: center;
+  
+}
+
+.product-card {
+  width: 1000px;
+  margin: 25px 0 0 350px;
+  flex: 0 0 50%;
   padding: 20px;
   border: 3px solid var(--dark);
   border-radius: var(--border-radius);
@@ -153,6 +185,7 @@ img {
   color: var(--light);
   align-items: center;
 }
+
 
 .card header {
   color: black;
@@ -173,7 +206,6 @@ img {
 .catergory-name {
   text-transform: uppercase;
   letter-spacing: 3px;
-  text-shadow: 2px 2px 5px var(--secondary);
   border: 10px groove var(--light);
   padding-top: 30px;
   padding-bottom: 30px;
@@ -188,3 +220,4 @@ img {
   align-content: flex-start;
   align-items: center;
 }
+
