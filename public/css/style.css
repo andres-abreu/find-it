@@ -1,3 +1,4 @@
+
 :root {
   --primary: grey;
   --secondary: #553a8c;
@@ -34,6 +35,7 @@ header {
   text-align: center;
   background: lavender;
   color: rebeccapurple;
+  text-shadow: 2px 2px whitesmoke;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   background-image: url("../images/Humaaans\ -\ 3\ Characters.png");
 
@@ -43,6 +45,7 @@ p {
   font-size: 30px;
   font-family: Satisfys, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif, initial;
   color: rgb(73, 105, 8);
+  text-shadow: 2px 2px whitesmoke;
   padding: 10px;
 
 }
@@ -68,6 +71,7 @@ aside {
 nav {
   display: flex;
   background-color: var(--secondary);
+  color: var(--quatrinary);
   text-align: center;
   list-style: none;
 }
@@ -80,8 +84,8 @@ nav a {
 }
 
 nav a:hover {
-  color: var(--secondary);
-  background-color: var(--dark);
+  color: whitesmoke;
+  background-color: rgba(211, 197, 233, 0.932);
   text-shadow: none;
 }
 
