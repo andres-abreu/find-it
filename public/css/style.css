@@ -1,6 +1,6 @@
 :root {
   --primary: grey;
-  --secondary: #553a8c;
+  --secondary: white;
   --tertiary: #5e877f;
   --quatrinary: white;
   --light: black;
@@ -33,7 +33,7 @@ header {
   font-size: 30px;
   text-align: center;
   background: lavender;
-  color: rebeccapurple;
+  color: rgb(116, 39, 194);
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   background-image: url("../images/Humaaans\ -\ 3\ Characters.png");
 
@@ -42,13 +42,18 @@ header {
 p {
   font-size: 30px;
   font-family: Satisfys, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif, initial;
-  color: rgb(73, 105, 8);
+  color: rgb(110, 81, 110);
   padding: 10px;
+  text-shadow: 1px 2px black;
+  letter-spacing: 1px;
 
 }
 
 h1 {
-  font-size: 50px;
+  font-size: 64px;
+  font-family: 'PT Serif', serif;
+  text-shadow: 1px 2px yellowgreen;
+
 }
 
 main {
@@ -70,6 +75,7 @@ nav {
   background-color: var(--secondary);
   text-align: center;
   list-style: none;
+  font-size: 20px;
 }
 
 nav a {
@@ -77,6 +83,7 @@ nav a {
   padding: 14px 20px;
   text-decoration: none;
   text-align: center;
+
 }
 
 nav a:hover {

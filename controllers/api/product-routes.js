@@ -4,20 +4,25 @@ const sequelize = require('../../config/connection')
 const withAuth = require('../../utils/auth')
 
 
-router.get('/', (req, res) => {
-    Product.findAll({
-        attributes: [
-            'id',
-            'product_name',
-            'description',
-        ]
-    })
-    .then(dbPostData => res.json(dbPostData))
-    .catch(err => {
-      console.log(err);
-      res.status(500).json(err);
-    });
-})
+// CREATE new product
+router.post('/api/product', async (req, res) => {
+    try {
+        const dbProductData = await Product.create({
+            tittle: req.body.title,
+            descirption: req.body.descirption,
+            price: req.body.price,
+        });
+
+        req.session.save(() => {
+            req.session.loggedIn = true;
+
+            res.status(200).json(dProductData);
+        });
+    } catch (err) {
+        console.log(err);
+        res.status(500).json(err);
+    }
+});
 
 router.delete('/:id', (req, res) => {
     console.log('id', req.params.id);
