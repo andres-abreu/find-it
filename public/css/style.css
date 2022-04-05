@@ -34,7 +34,8 @@ header {
   font-size: 30px;
   text-align: center;
   background: lavender;
-  color: rgb(116, 39, 194);
+  color: rebeccapurple;
+  text-shadow: 2px 2px whitesmoke;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   background-image: url("../images/Humaaans\ -\ 3\ Characters.png");
 
@@ -43,17 +44,17 @@ header {
 p {
   font-size: 30px;
   font-family: Satisfys, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif, initial;
-  color: rgb(110, 81, 110);
+  color: rgb(73, 105, 8);
   padding: 10px;
-  text-shadow: 1px 2px black;
+  text-shadow: 2px 2px whitesmoke;
   letter-spacing: 1px;
 
 }
 
 h1 {
   font-size: 64px;
-  font-family: 'PT Serif', serif;
-  text-shadow: 1px 2px yellowgreen;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  text-shadow: 2px 2px whitesmoke;
 
 }
 
@@ -73,7 +74,7 @@ aside {
 
 nav {
   display: flex;
-  background-color: var(--secondary);
+  background-color: rebeccapurple;
   color: var(--quatrinary);
   text-align: center;
   list-style: none;
@@ -102,6 +103,10 @@ nav a:hover {
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
+}
+
+p, btn {
+  text-shadow: none;
 }
 
 .btn-no-style {
@@ -138,9 +143,12 @@ img {
   margin: 20px;
   flex: 0 1 300px;
   border: 7px double var(--dark);
-  border-radius: 10px;
+  /*border-radius: 10px;*/
   background-color: white;
   color: var(--dark);
+}
+.product {
+  box-shadow: none;
 }
 
 .login-card {
