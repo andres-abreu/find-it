@@ -43,4 +43,31 @@ router.delete('/:id', (req, res) => {
         res.status(500).json({message: err.message});
     })
 })
+
+
+router.put('/:id', withAuth, (req, res) => {
+    Product.update({
+        product_name: req.body.name,
+        description: req.body.description,
+        price: req.body.price
+    },
+    {
+        where: {
+            id: req.params.id
+        }
+    }
+    )
+    .then(dbProductData => {
+        if (!dbProductData) {
+            res.status(404).json({message: "No product found with this id"})
+            return
+        }
+        res.json(dbProductData)
+    })
+    .catch(err => {
+        console.log(err);
+        res.status(500).json(err)
+    })
+
+})
 module.exports = router
