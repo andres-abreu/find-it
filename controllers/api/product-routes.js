@@ -1,11 +1,31 @@
 const router = require('express').Router();
-const {Product} = require('../../models');
-const { route } = require('../home-routes');
+const { User, Product, Category } = require('../../models');
+const sequelize = require('../../config/connection')
+const withAuth = require('../../utils/auth')
+
+
+router.get('/', (req, res) => {
+    Product.findAll({
+        attributes: [
+            'id',
+            'product_name',
+            'description',
+        ]
+    })
+    .then(dbPostData => res.json(dbPostData))
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+})
 
 router.delete('/:id', (req, res) => {
     console.log('id', req.params.id);
     Product.destroy({
-        where: {id: req.params.id}
+        where: 
+        {
+            id: req.params.id
+        }
     })
     .then(dbProductData => {
         if (!dbProductData) {
