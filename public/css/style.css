@@ -120,6 +120,10 @@ p, btn {
   margin-left: 30px;
 }
 
+#logout {
+  color: white;
+}
+
 img {
   max-width: 100%;
   height: auto;
@@ -128,7 +132,7 @@ img {
 .product {
   width: 50%;
   background-color: white;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: none;
   margin-bottom: 25px;
 }
 
@@ -147,9 +151,7 @@ img {
   background-color: white;
   color: var(--dark);
 }
-.product {
-  box-shadow: none;
-}
+
 
 .login-card {
   margin: 10px 0 40px 30px;
