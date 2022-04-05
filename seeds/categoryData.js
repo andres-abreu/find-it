@@ -12,24 +12,6 @@ const categoryData = [
     },
     {
         category_name: 'Accesories'
-    },
-    {
-        category_name: 'Dress'
-    },
-    {
-        category_name: 'Pants'
-    },
-    {
-        category_name: 'Active Wear'
-    },
-    {
-        category_name: 'Beach Wear'
-    },
-    {
-        category_name: 'Suits'
-    },
-    {
-        category_name: 'Shoes and Socks'
     }
 ]
 
