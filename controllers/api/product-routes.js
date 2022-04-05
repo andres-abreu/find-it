@@ -4,7 +4,6 @@ const sequelize = require('../../config/connection')
 const withAuth = require('../../utils/auth')
 
 
-// CREATE new product
 router.post('/api/product', async (req, res) => {
     try {
         const dbProductData = await Product.create({
