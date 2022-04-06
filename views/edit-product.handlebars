@@ -3,15 +3,17 @@
   <h2>
     Edit Post
   </h2>
-  <form class="edit-post-form">
+  <form class="edit-product-form">
     <div>
-      <input name="post-title" type="text" value="{{product.product_name}}" />
-      <input name="post-title" type="text" value="{{product.description}}" />
-      <input name="post-title" type="text" value="{{product.price}}" />
+      <input name="product-name" type="text" value="{{product.product_name}}" />
+      <input name="product-description" type="text" value="{{product.description}}" />
+      <input name="product-price" type="text" value="{{product.price}}" />
     </div>
     <button type="submit">Save post</button>
     <button type="button" class="delete-post-btn">Delete post</button>
   </form>
+  <img src="/css/uploadImages/{{product.filename}}">
 </article>
 
+<script src="/js/edit-product.js"></script>
 <script src="/js/delete-product.js"></script>

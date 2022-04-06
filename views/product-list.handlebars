@@ -1,6 +1,6 @@
 {{#if products.length}}
 <section>
-  <ul style="list-style: none">
+  <ul style="list-style: none" class="d-flex justify-content-around flex-wrap">
     {{#each products as |product|}}
     <li>
       {{> product-list-cat product}}
