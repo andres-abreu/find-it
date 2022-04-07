@@ -16,7 +16,8 @@ async function editProdut(event) {
     });
 
     if (response.ok) {
-        document.location.replace('/dashboard/')
+        alert('Product updated successfully!!')
+        document.location.replace('/')
     } else {
         alert(response.statusText)
     }
