@@ -1,0 +1,30 @@
+<article>
+  <a href="/dashboard"> &larr; Back to dashboard</a>
+  <h2>Edit Post</h2>
+  <div class="row align-self-end">
+  <div class="product-card">
+  
+  <form >
+    <div class="form-group">
+      <label for="product-name" name="name">Edit Title:</label>
+      <input name="product-name" type="text" value="{{product.product_name}}" />
+      </div>
+      <div class="form-group">
+      <label for="product-description" name="description">Edit description:</label> 
+      <input name="product-description" type="text" value="{{product.description}}" />
+      </div>
+      <div class="form-group">
+        <label for="product-price" name="price">Edit Price:</label>
+      <input name="product-price" type="text" value="{{product.price}}" />
+      </div>
+    <div class="form-group">
+    <button class="btn btn-primary" id="save" type="submit">Save Changes</button>
+    <button class="btn btn-primary" id="delete" type="button" class="delete-post-btn">Delete Product</button>
+    </div>
+  </form>
+  </div>
+</div>
+</article>
+
+<script src="/js/edit-product.js"></script>
+<script src="/js/delete-product.js"></script>

@@ -1,0 +1,13 @@
+{{#if products.length}}
+<section>
+  <ul style="list-style: none" class="d-flex justify-content-around flex-wrap">
+    {{#each products as |product|}}
+    <li>
+      {{> product-list-cat product}}
+    </li>
+    {{/each}}
+  </ul>
+</section>
+{{else}}
+<h2>No Products Posted Here</h2>
+{{/if}}
