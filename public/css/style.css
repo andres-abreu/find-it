@@ -124,7 +124,6 @@ btn {
   color: white;
 }
 
-
 img {
   max-width: 100%;
   height: auto;
@@ -147,13 +146,12 @@ img {
 .card {
   margin: 20px;
   flex: 0 1 300px;
-  border: 7px double var(--dark);
+  border: 9px double var(--dark);
   /*border-radius: 10px;*/
   background-color: white;
   color: var(--dark);
 
 }
-
 
 .login-card {
   /* margin: 10px 0 40px 30px; */
@@ -173,7 +171,6 @@ img {
   align-items: center;
 
 }
-
 
 .product-card {
   width: 1000px;
@@ -215,7 +212,6 @@ img {
   font-size: 1.4rem;
   text-align: center;
   font-weight: bold;
-  background-color: blue;
 }
 
 .catergory-name {
@@ -228,7 +224,23 @@ img {
   padding-left: 100px;
 }
 
-.edit
+
+footer {
+  display: flex;
+  flex-flow: row;
+  border-radius: var(--border-radius);
+  background-color: white;
+  color: var(--light);
+  align-items: flex-start;
+  padding-top: 80px;
+  float: right;
+
+}
+
+footer img {
+  border-radius: 80px;
+  width: 60px;
+}
 
 /* LAYOUT */
 .container {
