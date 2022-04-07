@@ -23,5 +23,5 @@ async function editProdut(event) {
     }
 }
 
-document.querySelector('.edit-product-form').addEventListener('submit',editProdut)
+document.querySelector('#save').addEventListener('click',editProdut)
 
