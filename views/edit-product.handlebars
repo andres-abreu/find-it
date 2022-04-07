@@ -3,16 +3,17 @@
   <h2>
     Edit Post
   </h2>
-  <form class="edit-product-form">
+  <form class="product-card">
     <div>
       <input name="product-name" type="text" value="{{product.product_name}}" />
       <input name="product-description" type="text" value="{{product.description}}" />
       <input name="product-price" type="text" value="{{product.price}}" />
     </div>
-    <button type="submit">Save post</button>
-    <button type="button" class="delete-post-btn">Delete post</button>
+    <button class="btn btn-primary" type="submit">Save post</button>
+    <button class="btn btn-primary" type="button" class="delete-post-btn">Delete post</button>
+    <img src="/css/uploadImages/{{product.filename}}">
   </form>
-  <img src="/css/uploadImages/{{product.filename}}">
+  
 </article>
 
 <script src="/js/edit-product.js"></script>
