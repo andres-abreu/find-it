@@ -1,3 +1,25 @@
+
+<section>
+    <div class="d-flex flex-wrap justify-content-evenly">
 {{#each categories as |category|}}
 {{> category-details}}
 {{/each}}
+</div>
+</section>
+
+
+{{!-- {{#if products.length}}
+<section>
+  <h2>Your Dashboard Items {{user.username.products}}</h2>
+  <ul style="list-style: none">
+    {{#each products as |product|}}
+    <li>
+      {{> product-info product}}
+      <a href="/dashboard/edit/{{product.id}}" class="edit-link btn btn-primary">Edit Product</a>
+    </li>
+    {{/each}}
+  </ul>
+</section>
+{{else}}
+<h1>You don't have any products posted!</h1>
+{{/if}} --}}
