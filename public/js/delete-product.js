@@ -9,7 +9,8 @@ async function deleteProduct(event) {
         method: 'DELETE'
     });
     if (response.ok) {
-        document.location.replace('/dashboard/')
+        alert('Product deleted successfully')
+        document.location.replace('/')
     } else {
         alert(response.statusText)
     }

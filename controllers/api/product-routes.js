@@ -15,7 +15,7 @@ router.post('/api/product', async (req, res) => {
         req.session.save(() => {
             req.session.loggedIn = true;
 
-            res.status(200).json(dProductData);
+            res.status(200).json(dbProductData);
         });
     } catch (err) {
         console.log(err);
@@ -33,7 +33,7 @@ router.delete('/:id', (req, res) => {
     })
     .then(dbProductData => {
         if (!dbProductData) {
-            res.status(404).json({message: 'No post found with this id'});
+            res.status(404).json({message: 'No product found with this id'});
             return;
         }
         res.json(dbProductData);
