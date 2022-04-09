@@ -7,7 +7,7 @@ FIND-IT allows users to buy and sell products via the FIND-IT market-place.
 * Sign-up
 * Log-in
 * Create a product in your dashboard, done.
-* Buy a product easily displayed when logged-in.
+* Buy a product, product-categories are displayed once the user is logged-in, simply choose a category and scroll thru the items.
 
 
 ### A QUICK-GLIMPSE OF THE APP IN ACTION!
