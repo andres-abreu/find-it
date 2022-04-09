@@ -13,6 +13,9 @@ FIND-IT allows users to buy and sell products via the FIND-IT market-place.
 ### A QUICK-GLIMPSE OF THE APP IN ACTION!
 https://user-images.githubusercontent.com/94572199/162587448-5fc36896-f4be-43e6-9bcd-56ed57bf74ae.mov
 
-### For the deployment-links:
+### FOR THE DEPLOYMENT-LINKS:
 * https://findthis.herokuapp.com/
 * https://github.com/andres-abreu/FIND-IT
+
+### FOR THE KNOWN DEPLOYMENT-ISSUES:
+* Uploaded files cannot be stored on Heroku, a setup up with AMAZON'S-AWS-S3 instance or DigitalOcean spaces is needed to upload.
