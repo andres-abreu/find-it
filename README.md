@@ -14,7 +14,7 @@ FIND-IT allows users to buy and sell products via the FIND-IT market-place.
 https://user-images.githubusercontent.com/94572199/162587448-5fc36896-f4be-43e6-9bcd-56ed57bf74ae.mov
 
 ### FOR THE DEPLOYMENT-LINKS:
-* https://findthis.herokuapp.com/
+* https://limitless-beach-87360.herokuapp.com/
 * https://github.com/andres-abreu/FIND-IT
 
 ### FOR THE KNOWN DEPLOYMENT-ISSUES:
