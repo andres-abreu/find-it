@@ -1,7 +1,13 @@
 # FIND-IT
 
 ## DESCRIPTION
-FIND-IT allows users to buy and sell products via the FIND-IT market-place.
+
+<div>
+  <img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E" alt="javascript"/>
+  <img src="https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white" alt="bootstrap"/>
+  <img src="https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white" alt="express"/>
+  
+* FIND-IT allows users to buy and sell products via the FIND-IT market-place.
 
 ### THE FAST & EASY STEPS ARE:
 * Sign-up
@@ -15,7 +21,13 @@ https://user-images.githubusercontent.com/94572199/162587448-5fc36896-f4be-43e6-
 
 ### FOR THE DEPLOYMENT-LINKS:
 * https://limitless-beach-87360.herokuapp.com/
-* https://github.com/andres-abreu/FIND-IT
+* https://github.com/andres-abreu/find-it
 
 ### FOR THE KNOWN DEPLOYMENT-ISSUES:
 * Uploaded files cannot be stored on Heroku, a setup up with AMAZON'S-AWS-S3 instance or DigitalOcean spaces is needed to upload.
+
+<div id="badges">
+  <br/>
+  <br/>
+  <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2F{username}1212%2Fhit-counter" alt="GH-count"/>
+  </div>
